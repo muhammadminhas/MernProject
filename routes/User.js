@@ -25,7 +25,7 @@ userRouter.post('/register',(req,res)=>{
             const newUser = new User({username,password,role});
             newUser.save(err=>{
                 if(err)
-                    res.status(500).json({message : {msgBody : "Error has occured", msgError: true}});
+                    res.status(500).json({message : {msgBody : "An Error has occured", msgError: true}});
                 else
                     res.status(201).json({message : {msgBody : "Account successfully created", msgError: false}});
             });
